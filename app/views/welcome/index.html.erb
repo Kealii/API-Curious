@@ -1,26 +1,13 @@
 <div class="container">
   <div class="well">
     <h1 class="text-center">Welcome to Twittier</h1>
+    <% if @user != nil %>
+      <%= image_tag "#{@user.image_url}" %>
+    <% end %>
   </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
-  <div class="well">
-    Insert Interesting News
-  </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
-  <div class="well">
-    Twitter Feed Goes Here
-  </div>
+  <% 5.times do %>
+    <div class="well">
+      Twitter Feed Goes Here
+    </div>
+  <% end %>
 </div>
