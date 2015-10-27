@@ -12,6 +12,7 @@ gem 'omniauth-twitter'
 gem 'figaro'
 gem 'capybara'
 gem 'bootstrap-sass'
+gem 'twitter'
 
 # gem 'therubyracer', platforms: :ruby
 # gem 'bcrypt', '~> 3.1.7'
