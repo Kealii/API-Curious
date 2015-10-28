@@ -19,15 +19,21 @@ RSpec.feature 'user' do
     })
   end
 
+  def bad_omniauth_credentials
+    OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:twitter] = :invalid_credentials
+  end
+
   def login_user
     visit login_path
   end
 
   before do
-    stub_omniauth
+    OmniAuth.config.mock_auth[:twitter] = nil
   end
 
   scenario 'logs in with twitter' do
+    stub_omniauth
     login_user
 
     expect(current_path).to eq(root_path)
@@ -36,7 +42,17 @@ RSpec.feature 'user' do
     expect(page).to have_content('Logout')
   end
 
+  scenario 'logs in with bad twitter credentials' do
+    bad_omniauth_credentials
+    login_user
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content('Login')
+    expect(page).to have_content('Invalid Credentials. Please try again.')
+  end
+
   scenario 'logs out with twitter' do
+    stub_omniauth
     login_user
     click_link('Logout')
 

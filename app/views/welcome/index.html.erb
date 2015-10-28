@@ -2,7 +2,12 @@
   <div class="well">
     <h1 class="text-center">Welcome to Twittier</h1>
     <% if @user != nil %>
-      <%= image_tag "#{@user.image_url}" %>
+      <div class="well" id="user-well">
+        <%= render 'user_info' %>
+      </div>
+      <div class="well" id="new-tweet">
+        New Tweet Form
+      </div>
     <% end %>
   </div>
   <h2>Tweets</h2>
