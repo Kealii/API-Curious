@@ -1,0 +1,7 @@
+<% flash.each do |name, messages| %>
+  <% Array(messages).each do |message| %>
+    <%= content_tag(:div, sanitize(message),
+                    class: "alert alert-#{name} fade-in text-center",
+                    id: "flash_#{name}") %>
+  <% end %>
+<% end %>

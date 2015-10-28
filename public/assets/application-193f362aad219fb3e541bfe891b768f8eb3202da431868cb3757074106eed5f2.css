@@ -8772,9 +8772,10 @@ button.close {
 /* line 1, /Users/michael_wong/Turing/Module3/Projects/API-Curious/app/assets/stylesheets/sitewide.scss */
 body {
   background-color: #67BCDB;
+  padding-top: 70px;
 }
 
-/* line 4, /Users/michael_wong/Turing/Module3/Projects/API-Curious/app/assets/stylesheets/sitewide.scss */
+/* line 5, /Users/michael_wong/Turing/Module3/Projects/API-Curious/app/assets/stylesheets/sitewide.scss */
 .well {
   background-color: #A8CD1B;
   border: 1px solid;
