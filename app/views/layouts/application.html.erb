@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if flash %>
+    <div id="flash"><%= render 'layouts/flash' %></div>
+  <% end %>
+
   <%= render 'layouts/navbar' %>
   <%= yield %>
 </body>
