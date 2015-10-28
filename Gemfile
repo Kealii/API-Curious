@@ -14,6 +14,7 @@ gem 'capybara'
 gem 'bootstrap-sass'
 gem 'twitter'
 gem 'simplecov'
+gem 'bootstrap_form'
 
 # gem 'therubyracer', platforms: :ruby
 # gem 'bcrypt', '~> 3.1.7'
