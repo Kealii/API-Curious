@@ -1,19 +1,26 @@
 <div class="container">
+  <% if @user == nil %>
   <div class="well">
     <h1 class="text-center">Welcome to Twittier</h1>
-    <% if @user != nil %>
-      <div class="well" id="user-well">
-        <%= render 'user_info' %>
-      </div>
-      <div class="well" id="new-tweet">
-        New Tweet Form
+  </div>
+  <div class="well">
+    <h3 class="text-center">
+      Please <%= link_to 'sign in', login_path %> with Twitter to continue.
+    </h3>
+  </div>
+  <% else %>
+    <div class="well" id="user-well">
+      <%= render 'user_info' %>
+    </div>
+    <div class="well" id="new-tweet">
+      New Tweet Form
+    </div>
+    <h2>Tweets</h2>
+    <% 5.times do %>
+      <div class="well">
+        Twitter Feed Goes Here
       </div>
     <% end %>
-  </div>
-  <h2>Tweets</h2>
-  <% 5.times do %>
-    <div class="well">
-      Twitter Feed Goes Here
-    </div>
   <% end %>
+  </div>
 </div>
