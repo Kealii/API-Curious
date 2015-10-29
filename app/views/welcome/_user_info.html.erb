@@ -1,7 +1,9 @@
-<div id="user-image"><%= image_tag "#{current_user.image_url}" %></div>
-<div id="user-name">
-  <h3><%= "#{current_user.name}" %></h3>
-  <h4><%= "@#{current_user.screen_name}" %></h4>
+<div class="text-center">
+  <div id="user-image"><%= image_tag "#{current_user.image_url}" %></div>
+  <div id="user-name">
+    <h4><%= "#{current_user.name}" %></h4>
+    <h5><%= "@#{current_user.screen_name}" %></h5>
+  </div>
+  <h4 id="following">Following:</h4><h5><%= "#{current_user.friends_count}"%></h5>
+  <h4 id="followers">Followers:</h4><h5><%= "#{current_user.followers_count}"%></h5>
 </div>
-<h3 id="following">Following:</h3><h4><%= "#{current_user.friends_count}"%></h4>
-<h3 id="followers">Followers:</h3><h4><%= "#{current_user.followers_count}"%></h4>
