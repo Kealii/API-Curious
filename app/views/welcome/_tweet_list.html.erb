@@ -2,13 +2,12 @@
   <div class="well">
     <div id="tweet.id">
       <h4>@<%= tweet.user.screen_name %></h4>
+      <%= tweet.full_text %><br><br>
       <% if tweet.favorited? %>
-        click here to unfavorite (replace with glyphicons)
+        <%= button_to 'Unfavorite', tweet_path(tweet.id), method: :patch, class: 'btn btn-danger' %>
       <% else %>
-        click here to favorite (replace with glyphicons)
+        <%= button_to 'Favorite', tweet_path(tweet.id), method: :patch, class: 'btn btn-primary' %>
       <% end %>
-        <br>
-      <%= tweet.full_text %>
     </div>
   </div>
 <% end %>

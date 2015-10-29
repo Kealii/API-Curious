@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/auth/failure', to: 'sessions#failure'
   get 'logout', to: 'sessions#destroy'
 
-  resources :tweets, only: [:new, :create]
+  resources :tweets, only: [:new, :create, :update]
 end
