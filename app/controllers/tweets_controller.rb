@@ -11,6 +11,16 @@ class TweetsController < ApplicationController
     redirect_to root_path
   end
 
+  def update
+    @user = current_user
+    if @user
+      service = TwitterService.new(@user)
+      tweet = service.fetch_tweet(params[:id])
+      service.favorite(tweet)
+    end
+    redirect_to root_path
+  end
+
   private
 
     def twitter_params

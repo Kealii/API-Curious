@@ -5,7 +5,7 @@
       <% if tweet.favorited? %>
         click here to unfavorite (replace with glyphicons)
       <% else %>
-        click here to favorite (replace with glyphicons)
+        <%= button_to 'Favorite', tweet_path(tweet.id), method: :favorite %>
       <% end %>
         <br>
       <%= tweet.full_text %>
