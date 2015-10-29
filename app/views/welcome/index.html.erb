@@ -16,9 +16,9 @@
       New Tweet Form
     </div>
     <h2>Tweets</h2>
-    <% 5.times do %>
+    <% @tweets.each do |tweet| %>
       <div class="well">
-        Twitter Feed Goes Here
+        <%= tweet.full_text %>
       </div>
     <% end %>
   <% end %>
