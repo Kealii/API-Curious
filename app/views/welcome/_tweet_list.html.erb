@@ -1,0 +1,14 @@
+<% @tweets.each do |tweet| %>
+  <div class="well">
+    <div id="tweet.id">
+      <h4>@<%= tweet.user.screen_name %></h4>
+      <% if tweet.favorited? %>
+        display glyphicon and button to unfavorite
+      <% else %>
+        click here to favorite
+      <% end %>
+        <br>
+      <%= tweet.full_text %>
+    </div>
+  </div>
+<% end %>

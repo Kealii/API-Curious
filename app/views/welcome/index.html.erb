@@ -13,15 +13,7 @@
       <%= render 'user_info' %>
     </div>
     <h2>Post a new Twit</h2>
-    <div class="well" id="new-tweet">
-      <%= render 'new_tweet_form' %>
-    </div>
-    <h2>Tweets</h2>
-    <% @tweets.each do |tweet| %>
-      <div class="well">
-        <%= tweet.full_text %>
-      </div>
-    <% end %>
-  <% end %>
+    <div class="well" id="new-tweet"><%= render 'new_tweet_form' %></div>
+    <h2>Twit Feed</h2><%= render 'tweet_list' %><% end %>
   </div>
 </div>
