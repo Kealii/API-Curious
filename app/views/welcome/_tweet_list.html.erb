@@ -3,9 +3,9 @@
     <div id="tweet.id">
       <h4>@<%= tweet.user.screen_name %></h4>
       <% if tweet.favorited? %>
-        display glyphicon and button to unfavorite
+        click here to unfavorite (replace with glyphicons)
       <% else %>
-        click here to favorite
+        click here to favorite (replace with glyphicons)
       <% end %>
         <br>
       <%= tweet.full_text %>
