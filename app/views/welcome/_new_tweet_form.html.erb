@@ -1,4 +1,4 @@
-<%= bootstrap_form_for @tweet do |f| %>
+<%= bootstrap_form_for :tweet, url: tweets_path do |f| %>
   <%= f.text_field :message %>
-  <%= f.submit %>
+  <%= f.submit "Tweet" %>
 <% end %>

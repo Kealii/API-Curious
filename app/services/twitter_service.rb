@@ -14,4 +14,8 @@ class TwitterService
   def tweets_for_user
     @client.home_timeline
   end
+
+  def tweet(tweet_message)
+    @client.update(tweet_message)
+  end
 end
