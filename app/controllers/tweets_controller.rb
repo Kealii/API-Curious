@@ -3,18 +3,16 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @user = current_user
-    if @user
-      service = TwitterService.new(@user)
+    if current_user
+      service = TwitterService.new(current_user)
       service.tweet(twitter_params[:message])
     end
     redirect_to root_path
   end
 
   def update
-    @user = current_user
-    if @user
-      service = TwitterService.new(@user)
+    if current_user
+      service = TwitterService.new(current_user)
       tweet = service.fetch_tweet(params[:id])
       service.favorite(tweet)
     end
