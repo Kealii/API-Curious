@@ -1,4 +1,6 @@
-<%= bootstrap_form_for :tweet, url: tweets_path do |f| %>
-  <%= f.text_field :message %>
-  <%= f.submit "Tweet" %>
-<% end %>
+<div id="new-tweet-form">
+  <%= bootstrap_form_for :tweet, url: tweets_path do |f| %>
+    <%= f.text_field :message %>
+    <%= f.submit "Twit", class: 'btn btn-info' %>
+  <% end %>
+</div>
